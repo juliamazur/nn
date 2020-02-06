@@ -69,7 +69,8 @@ body, p {
 }
 
 .p-special {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
+  margin-top: 1.5rem;
   margin-bottom: 2.5rem;
 }
 
@@ -770,10 +771,16 @@ input[type='checkbox'] {
 }
 
 .header .header-content ul {
-  font: 700 3rem/3.5rem "Open Sans", sans-serif;
+  font: 700 1.1rem/1.8rem "Open Sans", sans-serif;
   font-weight: 400;
-	font-size: 1.5rem;
-  line-height: 2.5rem;
+}
+
+
+@media (min-width: 1200px) {
+  .header .header-content ul {
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+  }
 }
 
 .header .text-container {
@@ -1772,7 +1779,7 @@ a:hover.back-to-top {
 
 	.navbar-custom .nav-item .nav-link:hover,
 	.navbar-custom .nav-item .nav-link.active {
-		color: #fff;
+		color: #6610f2;
 		opacity: 1;
 	}
 
@@ -2196,11 +2203,18 @@ a:hover.back-to-top {
 /* end of min-width width 1200px */
 
 p.logo-text {
-  font: 400 3.2rem/3.7rem "Devonshire", sans-serif;
+  font: 400 2.2rem/2.7rem "Devonshire", sans-serif;
   color: #000;
 }
 
 p.logo-text b{
   font-weight: 400;
   color: #6610f2;
+}
+
+@media (min-width: 1200px) {
+  p.logo-text {
+    font-size: 3.2rem;
+    line-height: 3.7rem;
+  }
 }

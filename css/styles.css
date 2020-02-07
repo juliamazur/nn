@@ -864,8 +864,8 @@ input[type='checkbox'] {
 /*     07. Details 1     */
 /*************************/
 .basic-1 {
-	padding-top: 1.625rem;
-	padding-bottom: 3.75rem;
+	/* padding-top: 1.625rem; */
+	/* padding-bottom: 3.75rem; */
 }
 
 .basic-1 .text-container {
@@ -904,6 +904,7 @@ input[type='checkbox'] {
 
 .list-unstyled .media-body {
 	margin-left: 0.625rem;
+  text-align: left;
 }
 
 .basic-2 .btn-solid-reg {
@@ -2216,5 +2217,11 @@ p.logo-text b{
   p.logo-text {
     font-size: 3.2rem;
     line-height: 3.7rem;
+  }
+}
+
+@media (max-width: 1200px) {
+  .hide-on-mob {
+    display: none;
   }
 }

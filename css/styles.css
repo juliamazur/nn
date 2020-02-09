@@ -2213,10 +2213,14 @@ p.logo-text b{
   color: #6610f2;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1024px) {
   p.logo-text {
     font-size: 3.2rem;
     line-height: 3.7rem;
+  }
+  .img-daddy {
+    position: relative;
+    top: 85px;
   }
 }
 

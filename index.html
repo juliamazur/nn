@@ -670,5 +670,30 @@
     <script src="js/jquery.magnific-popup.js"></script> <!-- Magnific Popup for lightboxes -->
     <script src="js/validator.min.js"></script> <!-- Validator.js - Bootstrap plugin that validates forms -->
     <script src="js/scripts.js"></script> <!-- Custom scripts -->
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.8.2/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.8.2/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyAg9UnADJK7e3NdMa0fAYZpwD7d1OAA-_c",
+    authDomain: "najlepsza-niania.firebaseapp.com",
+    databaseURL: "https://najlepsza-niania.firebaseio.com",
+    projectId: "najlepsza-niania",
+    storageBucket: "najlepsza-niania.appspot.com",
+    messagingSenderId: "728520751422",
+    appId: "1:728520751422:web:4dffce6936e69bc6f7946f",
+    measurementId: "G-9Q0HD7SR1S"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
+
 </body>
 </html>

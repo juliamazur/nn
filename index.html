@@ -93,7 +93,7 @@
                     <a class="nav-link page-scroll" href="#contact">Contact</a>
                 </li> -->
             </ul>
-            <span class="nav-item social-icons">
+            <!-- <span class="nav-item social-icons">
                 <span class="fa-stack">
                     <a href="#your-link">
                         <i class="fas fa-circle fa-stack-2x facebook"></i>
@@ -106,7 +106,7 @@
                         <i class="fab fa-instagram fa-stack-1x"></i>
                     </a>
                 </span>
-            </span>
+            </span> -->
         </div>
     </nav> <!-- end of navbar -->
     <!-- end of navigation -->
@@ -162,7 +162,7 @@
                     Następnie przeprowadzimy <b>Rozmowy Rekrutacyjne</b> z wybranymi przez Państwa Kandydatkami, w tym testy kompetencji,
                     sprawdzimy ich wiarygodność i referencje,
                     po czym przedstawimy <b>Naszą Rekomendację</b>.
-                  Na koniec pomożemy Wam przygotować <b>Dobrą Umowę</b>, która będzie podstawą satysfakcjonującej współpracy dla obu stron.</p>
+                  Na koniec pomożemy Wam przygotować <b>Dobrą Umowę</b>, która będzie podstawą satysfakcjonującej współpracy dla&nbsp;obu&nbsp;stron.</p>
                 </div> <!-- end of col -->
             </div> <!-- end of row -->
 
@@ -556,22 +556,22 @@
                     <div class="form-container">
                         <form id="requestForm" data-toggle="validator" data-focus="false">
                             <div class="form-group">
-                                <input type="text" class="form-control-input" id="rname" name="rname" required>
-                                <label class="label-control" for="rname">Imię i Nazwisko</label>
+                                <input type="text" class="form-control-input" id="rname" name="rname">
+                                <label class="label-control" for="rname">Imię</label>
                                 <div class="help-block with-errors"></div>
                             </div>
                             <div class="form-group">
-                                <input type="email" class="form-control-input" id="remail" name="remail" required>
+                                <input type="email" class="form-control-input" id="remail" name="remail">
                                 <label class="label-control" for="remail">Email</label>
                                 <div class="help-block with-errors"></div>
                             </div>
                             <div class="form-group">
-                                <input type="text" class="form-control-input" id="rphone" name="rphone" required>
+                                <input type="text" class="form-control-input" id="rphone" name="rphone">
                                 <label class="label-control" for="rphone">Nr Telefonu</label>
                                 <div class="help-block with-errors"></div>
                             </div>
                             <div class="form-group">
-                                <select class="form-control-select" id="rselect" required>
+                                <select class="form-control-select" id="rselect">
                                     <option class="select-option" value="" disabled selected>Jestem zainteresowana/y...</option>
                                     <option class="select-option" value="Mini">Pakietem Mini</option>
                                     <option class="select-option" value="Midi">Pakietem Midi</option>
@@ -580,14 +580,15 @@
                                 <div class="help-block with-errors"></div>
                             </div>
                             <div class="form-group checkbox">
-                                <input type="checkbox" id="rterms" value="Agreed-to-Terms" name="rterms" required>Akceptuję <a href="privacy-policy.html">Politykę Prywatności</a> i <a href="terms-conditions.html">Regulamin Serwisu</a>
+                                <input type="checkbox" checked id="rterms" value="Agreed-to-Terms" name="rterms" required>
+                                Akceptuję <a href="privacy-policy.html">Politykę Prywatności</a>
                                 <div class="help-block with-errors"></div>
                             </div>
                             <div class="form-group">
-                                <button type="submit" class="form-control-submit-button">WYŚLIJ</button>
+                                <button type="submit" class="form-control-submit-button" onClick="sendDoc()">WYŚLIJ</button>
                             </div>
                             <div class="form-message">
-                                <div id="rmsgSubmit" class="h3 text-center hidden"></div>
+                                <div id="rmsgSubmit" class="h6 text-center hidden">Dziękujemy! Skontaktujemy się najszybciej, jak to możliwe.</div>
                             </div>
                         </form>
                     </div> <!-- end of form-container -->
@@ -606,8 +607,10 @@
             <div class="row">
                 <div class="col-md-4">
                     <div class="footer-col">
-                        <h3>O nas</h3>
-                        <!-- <p>We're passionate about offering some of the best business growth services for startups</p> -->
+                        <h3>NajlepszaNiania.com</h3>
+                        <p>Z nami znajdziesz<br/> Najlepszą Nianię w Warszawie!</p>
+                        <p>Jesteśmy zarejestrowani w KRAZ:</p>
+                        <p>email: tel:</p>
                     </div>
                 </div> <!-- end of col -->
                 <div class="col-md-4">
@@ -618,14 +621,10 @@
                                 <i class="fas fa-square"></i>
                                 <div class="media-body"><a class="turquoise" href="privacy-policy.html">Polityka Prywatości</a></div>
                             </li>
-                            <li class="media">
-                                <i class="fas fa-square"></i>
-                                <div class="media-body"><a class="turquoise" href="terms-conditions.html">Regulamin Serwisu</a></div>
-                            </li>
                         </ul>
                     </div>
                 </div> <!-- end of col -->
-                <div class="col-md-4">
+                <!-- <div class="col-md-4">
                     <div class="footer-col last">
                           <h3>Social Media</h3>
                         <span class="fa-stack">
@@ -641,7 +640,8 @@
                             </a>
                         </span>
                     </div>
-                </div> <!-- end of col -->
+                </div>  -->
+                <!-- end of col -->
             </div> <!-- end of row -->
         </div> <!-- end of container -->
     </div> <!-- end of footer -->
@@ -677,6 +677,7 @@
 <!-- TODO: Add SDKs for Firebase products that you want to use
      https://firebase.google.com/docs/web/setup#available-libraries -->
 <script src="https://www.gstatic.com/firebasejs/7.8.2/firebase-analytics.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-firestore.js"></script>
 
 <script>
   // Your web app's Firebase configuration
@@ -691,8 +692,28 @@
     measurementId: "G-9Q0HD7SR1S"
   };
   // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
+  var defaultProject = firebase.initializeApp(firebaseConfig);
   firebase.analytics();
+
+  console.log("---------------------");
+  console.log(defaultProject.name);
+  var firestore = defaultProject.firestore();
+  // let setDoc = firestore.collection('leads').doc('lead_1').set({"test": "ok"});
+
+  function sendDoc(event) {
+    // event.preventDefault();
+    if(!document.getElementById("remail").value && !document.getElementById("rphone").value) return;
+
+    let doc = {};
+    if(document.getElementById("rname").value) doc.name = document.getElementById("rname").value;
+    if(document.getElementById("remail").value) doc.email = document.getElementById("remail").value;
+    if(document.getElementById("rphone").value) doc.phone = document.getElementById("rphone").value;
+    if(document.getElementById("rselect").value) doc.select = document.getElementById("rselect").value;
+    console.log(doc);
+    firestore.collection('leads').doc(`lead_${Date.now()}`).set(doc).then(() => {
+      document.getElementById("rmsgSubmit").classList.remove("hidden");
+    });
+  }
 </script>
 
 </body>

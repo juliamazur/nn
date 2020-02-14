@@ -2229,3 +2229,7 @@ p.logo-text b{
     display: none;
   }
 }
+
+.hidden {
+  display: none !important;
+}

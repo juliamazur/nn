@@ -1,4 +1,4 @@
-<?php
+<?php /*
 $errorMSG = "";
 
 if (empty($_POST["name"])) {
@@ -63,5 +63,5 @@ if ($success && $errorMSG == ""){
     } else {
         echo $errorMSG;
     }
-}
+} */
 ?>
